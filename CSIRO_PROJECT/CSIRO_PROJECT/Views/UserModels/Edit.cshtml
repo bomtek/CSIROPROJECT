@@ -1,0 +1,64 @@
+﻿@model CSIRO_PROJECT.ViewModels.UserModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>UserModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="userId" />
+            <div class="form-group">
+                <label asp-for="userFName" class="control-label"></label>
+                <input asp-for="userFName" class="form-control" />
+                <span asp-validation-for="userFName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userLName" class="control-label"></label>
+                <input asp-for="userLName" class="form-control" />
+                <span asp-validation-for="userLName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userAddress" class="control-label"></label>
+                <input asp-for="userAddress" class="form-control" />
+                <span asp-validation-for="userAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userUni" class="control-label"></label>
+                <input asp-for="userUni" class="form-control" />
+                <span asp-validation-for="userUni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userCourse" class="control-label"></label>
+                <input asp-for="userCourse" class="form-control" />
+                <span asp-validation-for="userCourse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userContact" class="control-label"></label>
+                <input asp-for="userContact" class="form-control" />
+                <span asp-validation-for="userContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userCL" class="control-label"></label>
+                <textarea asp-for="userCL" class="form-control"></textarea>
+                <span asp-validation-for="userCL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

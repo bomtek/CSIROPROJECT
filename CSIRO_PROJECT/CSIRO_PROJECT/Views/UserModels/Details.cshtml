@@ -1,0 +1,60 @@
+﻿@model CSIRO_PROJECT.ViewModels.UserModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>UserModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userFName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userFName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userLName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userLName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userAddress)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userAddress)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userUni)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userUni)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userCourse)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userCourse)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userContact)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userContact)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userCL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userCL)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.userId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
